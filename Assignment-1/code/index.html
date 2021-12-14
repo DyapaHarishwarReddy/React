@@ -1,23 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width">
-<title>Designing Web App using HTML/CSS/REACT</title>
-<link rel="stylesheet" href="style.css" />
-<script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-<script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-<!-- Don't use this in production: -->
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width">
+  <title>Designing Web App using HTML/CSS/REACT</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+  <!-- Don't use this in production: -->
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 </head>
 <body>
-    <div id="root"></div>
-    <script type="text/babel">
-//React Code here
- ReactDOM.render(<div></div>,document.getElementById('root'));
-
-</script>
-<!--
+  <div id="root"></div>
+  <script type="text/babel">
+    //React Code here
+    ReactDOM.render(<div></div>, document.getElementById('root'));
+    const divs = React.createElement('div', {},
+      React.createElement('div', { class: "container1" }, '1st'),
+      React.createElement('div', { class: "container2" }, '2nd'),
+      React.createElement('div', { class: 'container3' }, '3rd'),
+      React.createElement('div', { class: 'container' }, '4th'),
+      React.createElement('div', { class: 'container' }, '5th'),
+      React.createElement('div', { class: 'container6' }, '6th'),
+    );
+    ReactDOM.render(divs, document.getElementById('root'));
+  </script>
+  <!--
      Note: this page is a great way to try React but it's not suitable for production.
      It slowly compiles JSX with Babel in the browser and uses a large development build of React.
      Read this section for a production-ready setup with JSX:
